@@ -22,8 +22,7 @@ public class PostTasksJPanel extends javax.swing.JPanel {
      */
     private JPanel userProcessContainer;
     private UserAccount userAccount;
-    private Org organization;
-    private Enterprise enterprise;
+    
 
     public PostTasksJPanel(JPanel userProcessContainer, UserAccount userAccount, Org organization, Enterprise enterprise) {
         initComponents();
@@ -40,14 +39,14 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         model.setRowCount(0);
         for (WorkRequest request : userAccount.getWorkQueue().getWorkRequestList()) {
             if (request instanceof PostTaskWorkRequest) {
-                Object[] row = new Object[5];
+                Object[] row = new Object[3];
                 row[0] = (PostTaskWorkRequest)request;
                 row[1] = ((PostTaskWorkRequest) request).getTask();
                 row[2] = request.getReceiver();
                 row[3] = request.getStatus();
                 String workDone = ((PostTaskWorkRequest) request).getWorkDone();
                 row[4] = workDone == null ? "Waiting" : workDone;
-
+                row[5] = workStage == null ? "Error" : workStage;
                 model.addRow(row);
             }
         }
@@ -69,32 +68,7 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         tblPostTasks = new javax.swing.JTable();
         lblHeader = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(700, 700));
-        setMinimumSize(new java.awt.Dimension(700, 700));
-        setPreferredSize(new java.awt.Dimension(700, 700));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btn_postTask.setBackground(new java.awt.Color(255, 255, 255));
-        btn_postTask.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btn_postTask.setText("Post Task");
-        btn_postTask.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btn_postTask.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_postTaskActionPerformed(evt);
-            }
-        });
-        add(btn_postTask, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 150, 50));
-
-        btn_refreshview.setBackground(new java.awt.Color(255, 255, 255));
-        btn_refreshview.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        btn_refreshview.setText("Refresh");
-        btn_refreshview.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btn_refreshview.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_refreshviewActionPerformed(evt);
-            }
-        });
+        
         add(btn_refreshview, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 75, 90, 40));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/backicon.jpeg"))); // NOI18N
@@ -138,33 +112,8 @@ public class PostTasksJPanel extends javax.swing.JPanel {
         add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 290, 50));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_postTaskActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_postTaskActionPerformed
-        // TODO add your handling code here:
-        CardLayout  cardLayout = (CardLayout) userProcessContainer.getLayout();
-        AddPostTasksJPanel aptjp = new AddPostTasksJPanel(userProcessContainer, userAccount, organization,enterprise);
-        userProcessContainer.add("AddPostTasksJPanel",aptjp);
-        cardLayout.next(userProcessContainer);
-    }//GEN-LAST:event_btn_postTaskActionPerformed
-
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
-
-    private void btn_refreshviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_refreshviewActionPerformed
-        // TODO add your handling code here:
-        populateRequestTable();
-    }//GEN-LAST:event_btn_refreshviewActionPerformed
-
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+  
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btn_postTask;
-    private javax.swing.JButton btn_refreshview;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblHeader;
-    private javax.swing.JTable tblPostTasks;
-    // End of variables declaration//GEN-END:variables
+ 
 }
