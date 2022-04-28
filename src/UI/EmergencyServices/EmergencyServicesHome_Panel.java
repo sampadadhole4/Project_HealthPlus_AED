@@ -56,7 +56,6 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         splitPane = new javax.swing.JSplitPane();
         controlJPanel = new javax.swing.JPanel();
-        btnLogout = new javax.swing.JButton();
         btn_work = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
@@ -158,13 +157,7 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGap(0, 900, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup().addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))));
+
         layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGap(0, 900, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
