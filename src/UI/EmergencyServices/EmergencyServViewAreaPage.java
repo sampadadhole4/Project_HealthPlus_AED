@@ -11,15 +11,10 @@ import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
-import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author sampadadhole
- */
 public class EmergencyServViewAreaPage extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -172,13 +167,6 @@ public class EmergencyServViewAreaPage extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn_gobackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_gobackActionPerformed
-        // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btn_gobackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
