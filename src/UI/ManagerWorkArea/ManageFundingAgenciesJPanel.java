@@ -57,15 +57,15 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
                 }
             }
         }
-//        for (FundRaiser agency : organization.getAgencyDirectory().getAgencyList()) {
-//            if (agency.isStatus() == true) {
-//                Object[] row = new Object[3];
-//                row[0] = agency.getId();
-//                row[1] = agency;
-//                row[2] = agency.getCity();
-//                model.addRow(row);
-//            }
-//        }
+       for (FundRaiser agency : organization.getAgencyDirectory().getAgencyList()) {
+           if (agency.isStatus() == true) {
+               Object[] row = new Object[3];
+               row[0] = agency.getId();
+               row[1] = agency;
+               row[2] = agency.getCity();
+               model.addRow(row);
+           }
+       }
     }
 
     /**
@@ -108,22 +108,7 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
         });
         add(btngoback, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 510, 100, 90));
 
-        tblFundingAgency.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Name", "Budget", "City"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        
         jScrollPane1.setViewportView(tblFundingAgency);
         if (tblFundingAgency.getColumnModel().getColumnCount() > 0) {
             tblFundingAgency.getColumnModel().getColumn(0).setResizable(false);
@@ -132,7 +117,12 @@ public class ManageFundingAgenciesJPanel extends javax.swing.JPanel {
         }
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 126, 500, 170));
-
+        CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
+        ManagerWorkAreaJPanel mawajp = new ManagerWorkAreaJPanel(userProcessContainer, system, userAccount,
+                organization, enterprise);
+        userProcessContainer.add("ManagerWorkAreaJPanel", mawajp);
+        cardLayout.next(userProcessContainer);
+        
         lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblHeader.setText("Manage Funding Agencies");
