@@ -81,12 +81,9 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         text_trustvalue.setText("<value>");
         add(text_trustvalue, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
 
-        label_project.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        label_project.setText("Project:");
-        add(label_project, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, -1, -1));
 
         combo_project.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
-        combo_project.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_project.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" , "Item 5"}));
         combo_project.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 combo_projectActionPerformed(evt);
@@ -95,7 +92,7 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         add(combo_project, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 149, -1));
 
         btn_posttask.setBackground(new java.awt.Color(255, 255, 255));
-        btn_posttask.setText("Post");
+        btn_posttask.setText("Push task to emergency");
         btn_posttask.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         btn_posttask.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,7 +144,7 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
         taskRequest.setProject((Project) combo_project.getSelectedItem());
         taskRequest.setTask(task);
         taskRequest.setSender(userAccount);
-        taskRequest.setStatus("Sent");
+        taskRequest.setStatus("Sent request");
 
         Org org = null;
         for (Org o : enterprise.getOrganizationDirectory().getOrganizationList()) {
@@ -183,7 +180,6 @@ public class AddPostTasksJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_goback;
-    private javax.swing.JButton btn_posttask;
     private javax.swing.JComboBox<Object> combo_project;
     private javax.swing.JLabel label_project;
     private javax.swing.JLabel label_task;
