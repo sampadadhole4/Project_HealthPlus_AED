@@ -58,8 +58,7 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
         controlJPanel = new javax.swing.JPanel();
         btnLogout = new javax.swing.JButton();
         btn_work = new javax.swing.JButton();
-        btn_view = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(255, 155, 155));
@@ -76,8 +75,14 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 1083, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1083,
+                                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, Short.MAX_VALUE))));
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 975, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup().addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1083,
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 975,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))));
 
@@ -127,7 +132,7 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
                                         .addGap(18, 18, 18)
                                         .addComponent(btn_work, javax.swing.GroupLayout.PREFERRED_SIZE, 34,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(28, 28, 28)
+                                        .addGap(38, 28, 28)
                                         .addComponent(btn_view, javax.swing.GroupLayout.PREFERRED_SIZE, 34,
                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(182, 182, 182)
@@ -171,7 +176,7 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-
+        HeadLayout headLayout = (CardLayout) mainContainer.getLayout().getClass();
         CardLayout cardLayout = (CardLayout) mainContainer.getLayout();
         mainContainer.remove(this);
         cardLayout.previous(mainContainer);
