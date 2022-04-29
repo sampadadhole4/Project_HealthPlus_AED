@@ -103,7 +103,7 @@ public class CallEmergecyServices extends javax.swing.JPanel {
         text_emailId = new javax.swing.JTextField();
         label_emailId = new javax.swing.JLabel();
 
-        jPanel2.setBackground(new java.awt.Color(255, 219, 208));
+        
 
         btn_getEmergency.setBackground(new java.awt.Color(255, 255, 255));
         btn_getEmergency.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
@@ -174,7 +174,8 @@ public class CallEmergecyServices extends javax.swing.JPanel {
 
         label_emailId.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         label_emailId.setText("Verify the Email:");
-
+        jPanel2.setBackground(new java.awt.Color(155, 119, 208));
+        jPanel2.addAncestorListener(0);
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
