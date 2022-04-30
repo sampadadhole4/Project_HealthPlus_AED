@@ -11,15 +11,10 @@ import Healthplus.EmergencyServices.EmergencyRequestDirectory;
 import Healthplus.Enterprises.Enterprise;
 import Healthplus.Org.Org;
 import Healthplus.UserAccount.UserAccount;
-import java.awt.CardLayout;
 import javax.swing.JPanel;
 import UI.EmergencyServices.CallEmergecyServices;
 import java.util.ArrayList;
 
-/**
- *
- * @author sampadadhole
- */
 public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
 
    private JPanel userProcessContainer;
@@ -74,18 +69,18 @@ public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
         lblHeader.setText("Emergency Services Work Area");
         jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 330, 26));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ambulance.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AEDtruck.gif"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 820, 600));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
             .addGap(0, 1083, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1083, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1083, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -103,7 +98,7 @@ public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
         CallEmergecyServices mtsj = new CallEmergecyServices(userProcessContainer, system, userAccount, organization, enterprise,EmergencyList);
-        userProcessContainer.add("mtsj", mtsj);
+        userProcessContainer.add("arta", arta);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_callEmergencyActionPerformed
 
