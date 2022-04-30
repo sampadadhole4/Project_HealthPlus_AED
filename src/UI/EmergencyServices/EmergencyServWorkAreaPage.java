@@ -66,7 +66,7 @@ public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
 
         lblHeader.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
         lblHeader.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblHeader.setText("Emergency Services Work Area");
+        lblHeader.setText("Transport Services Work Area");
         jPanel1.add(lblHeader, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 330, 26));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/AEDtruck.gif"))); // NOI18N
@@ -97,7 +97,7 @@ public class EmergencyServWorkAreaPage extends javax.swing.JPanel {
     private void btn_callEmergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_callEmergencyActionPerformed
         // TODO add your handling code here:
         CardLayout cardLayout = (CardLayout) userProcessContainer.getLayout();
-        CallEmergecyServices mtsj = new CallEmergecyServices(userProcessContainer, system, userAccount, organization, enterprise,EmergencyList);
+        CallEmergecyServices arta = new CallEmergecyServices(userProcessContainer, system, userAccount, organization, enterprise,EmergencyList);
         userProcessContainer.add("arta", arta);
         cardLayout.next(userProcessContainer);
     }//GEN-LAST:event_btn_callEmergencyActionPerformed
