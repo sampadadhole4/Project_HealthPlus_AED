@@ -62,24 +62,24 @@ public class EmergencyServicesHome_Panel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 155, 155));
 
-        splitPane.setBackground(new java.awt.Color(255, 255, 255));
-        splitPane.setMaximumSize(new java.awt.Dimension(900, 900));
-        splitPane.setMinimumSize(new java.awt.Dimension(900, 900));
+        splitPane.setBackground(new java.awt.Color(145, 255, 255));
+        
 
         controlJPanel.setBackground(new java.awt.Color(255, 198, 186));
-        controlJPanel.setMaximumSize(new java.awt.Dimension(200, 200));
-        controlJPanel.setMinimumSize(new java.awt.Dimension(200, 200));
+        controlJPanel.setMaximumSize(new java.awt.Dimension(300, 213));
+        controlJPanel.setMinimumSize(new java.awt.Dimension(130, 293));
 
-        btnLogout.setBackground(new java.awt.Color(255, 255, 255));
-        btnLogout.setText("Logout");
-        btnLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        btnLogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogoutActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGap(0, 1083, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup().addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1083,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))));
 
         btn_work.setBackground(new java.awt.Color(255, 255, 255));
         btn_work.setText("Work Area");
