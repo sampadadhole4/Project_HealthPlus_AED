@@ -12,8 +12,9 @@ public class Account {
 
     public FundRaiser getAgency() {
         return agency;
+        
     }
-    
+
 
     public void setAgency(FundRaiser agency) {
         this.agency = agency;
