@@ -38,6 +38,7 @@ public class ProjectViewJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         populateProjectTable();
     }
+    
     public void populateProjectTable() {
         DefaultTableModel model = (DefaultTableModel) tblViewProjects.getModel();
         if(enterprise.getEnterpriseType().getValue().equals("OldAgeHome")){
