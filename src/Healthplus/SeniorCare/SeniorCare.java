@@ -16,6 +16,7 @@ public class SeniorCare {
     private boolean illness;
     private boolean medicines;
     
+
     public SeniorCare(){
         id = count;
         count++;
@@ -85,5 +86,6 @@ public class SeniorCare {
     public String toString() {
         return name;
     }
+    
     
 }
