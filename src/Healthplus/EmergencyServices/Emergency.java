@@ -14,6 +14,8 @@ public class Emergency {
     private String City;
     private String State;
     private String drivername;
+    //private String name;
+
 
     public String getDrivername() {
         return drivername;
