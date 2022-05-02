@@ -19,6 +19,7 @@ public abstract class Enterprise extends Org {
         organizationDirectory = new OrgDirectory();
     }
     
+    
     public enum EnterpriseType{
         Trust("Trust"),
         OldAgeHome("OldAgeHome"),
