@@ -34,4 +34,5 @@ public class SeniorCareDirectory {
     public void removeSeniorCare(SeniorCare senior){
         seniorCareList.remove(senior);
     }    
+
 }
