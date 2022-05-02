@@ -14,9 +14,10 @@ import java.util.ArrayList;
  */
 public class EmergencyRequestDirectory {
     private ArrayList <Emergency> EmergencyList;
-    
+
     
     public EmergencyRequestDirectory(){
+        
         this.EmergencyList = new ArrayList<Emergency>();
     }
 
