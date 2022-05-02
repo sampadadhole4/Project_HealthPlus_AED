@@ -10,6 +10,7 @@ import Healthplus.Enterprises.EnterpriseDirectory;
 public class City extends Network{
     private EnterpriseDirectory enterpriseDirectory;
     
+
     public City() {
         super(NetworkType.City.getValue());
         enterpriseDirectory = new EnterpriseDirectory();
@@ -18,6 +19,7 @@ public class City extends Network{
     public EnterpriseDirectory getEnterpriseDirectory() {
         return enterpriseDirectory;
     }
+
 
     public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDirectory) {
         this.enterpriseDirectory = enterpriseDirectory;
