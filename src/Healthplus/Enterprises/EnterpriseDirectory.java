@@ -12,6 +12,7 @@ public class EnterpriseDirectory {
     
     public EnterpriseDirectory(){
         enterpriseList = new ArrayList<Enterprise>();
+        
     }
 
     public ArrayList<Enterprise> getEnterpriseList() {
