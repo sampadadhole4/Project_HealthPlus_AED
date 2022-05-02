@@ -23,6 +23,7 @@ public class DriverDirectory {
         return driverslist;
     }
 
+
     public void setApplicantList(ArrayList<Driver> driverslist) {
         this.driverslist = driverslist;
     }
