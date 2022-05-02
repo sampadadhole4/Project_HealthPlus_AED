@@ -24,6 +24,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 
 
+
 public class ApplyForJobJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -35,6 +36,7 @@ public class ApplyForJobJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ApplyForJobJPanel
      */
+    
     public ApplyForJobJPanel(JPanel userProcessContainer, E_System system, DB4OUtil dB4OUtil, UserAccount userAccount, String user) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
