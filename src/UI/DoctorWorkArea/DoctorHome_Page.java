@@ -15,6 +15,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 
 
+
 public class DoctorHome_Page extends javax.swing.JPanel {
 
     /**
@@ -41,6 +42,7 @@ public class DoctorHome_Page extends javax.swing.JPanel {
         userProcessContainer.add("CoordinatorWorkAreaJPanel", dwaj);
         cardLayout.next(userProcessContainer);
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
